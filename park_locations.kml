@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+	<Document>
+		<Style id="z1">
+			<IconStyle>
+				<Icon>
+					<href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Placemark>
+			<name>Apartment</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.301944,34.052222</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Young King Restaurant</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.303056,34.0525</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Yeop Dduk</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.304167,34.0525</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hite Lounge</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.30375,34.053056</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Homeshopping World</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.301944,34.052778</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SleepEZ</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.301611,34.053139</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Papa's Chicken</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.300556,34.052778</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Chase Bank</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.299722,34.052222</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Guelaguetza Restaurant</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.300833,34.052222</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>
