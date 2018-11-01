@@ -1,75 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://earth.google.com/kml/2.0">
 	<Document>
-		<Style id="z1">
+		<Style id="coordinateStyle">
 			<IconStyle>
 				<Icon>
 					<href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
 				</Icon>
 			</IconStyle>
 		</Style>
-		<Placemark>
-			<name>Apartment</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.301944,34.052222</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>Young King Restaurant</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.303056,34.0525</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>Yeop Dduk</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.304167,34.0525</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>Hite Lounge</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.30375,34.053056</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>Homeshopping World</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.301944,34.052778</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>SleepEZ</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.301611,34.053139</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>Papa's Chicken</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.300556,34.052778</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>Chase Bank</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.299722,34.052222</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<name>Guelaguetza Restaurant</name>
-			<styleUrl>#z1</styleUrl>
-			<Point>
-				<coordinates>-118.300833,34.052222</coordinates>
-			</Point>
-		</Placemark>
+
+	    <Style id="convexHullPolyStyle">
+			<LineStyle>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7d00ff00</color>
+			</PolyStyle>
+	    </Style>
+		<Folder>
+			<name>9 Locations</name>
+			<description>Point coordinates of 9 locations for hw3</description>
+			<Placemark>
+				<name>Apartment</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.301944,34.052222</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Young King Restaurant</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.303056,34.0525</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Yeop Dduk</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.304167,34.0525</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hite Lounge</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.30375,34.053056</coordinates>
+				</Point> 
+			</Placemark>
+			<Placemark>
+				<name>Homeshopping World</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.301944,34.052778</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>SleepEZ</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.301611,34.053139</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Papas Chicken</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.300556,34.052778</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Chase Bank</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.299722,34.052222</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Guelaguetza Restaurant</name>
+				<styleUrl>coordinateStyle</styleUrl>
+				<Point>
+					<coordinates>-118.300833,34.052222</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+
+		<Folder>
+			<name>Convex Hull</name>
+			<description>Convex hull calculated with ST_ConvexHull() function in PostgreSQL</description>
+			<LookAt>
+				<longitude>-118.3019444992309</longitude>
+				<latitude>34.05268044560295</latitude>
+				<altitude>0</altitude>
+				<heading>1.067920532898939e-009</heading>
+				<tilt>44.99999994560297</tilt>
+				<range>999.9998743874111</range>
+			</LookAt>
+	        <Placemark>
+				<name>Convex hull around 3060 W Olympic</name>
+				<styleUrl>#convexHullPolyStyle</styleUrl>
+				<Polygon>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<extrude>1</extrude>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>-118.304167,34.0525,25
+								-118.301944,34.052222,25
+								-118.299722,34.052222,25
+								-118.300556,34.052778,25
+								-118.301611,34.053139,25
+								-118.30375,34.053056,25
+								-118.304167,34.0525,25 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
 	</Document>
 </kml>
