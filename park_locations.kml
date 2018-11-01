@@ -9,14 +9,28 @@
 			</IconStyle>
 		</Style>
 
-	    <Style id="convexHullPolyStyle">
+
+
+		<Style id="convexHullPolyStyle">
 			<LineStyle>
 				<width>1.5</width>
 			</LineStyle>
 			<PolyStyle>
 				<color>7d00ff00</color>
 			</PolyStyle>
-	    </Style>
+		</Style>
+
+
+
+		<Style id="nearestNeighborsLineStyle">
+			<LineStyle>
+				<width>6</width>
+				<color>7d0000ff</color>
+			</LineStyle>
+		</Style>
+
+
+
 		<Folder>
 			<name>9 Locations</name>
 			<description>Point coordinates of 9 locations for hw3</description>
@@ -85,6 +99,8 @@
 			</Placemark>
 		</Folder>
 
+
+
 		<Folder>
 			<name>Convex Hull</name>
 			<description>Convex hull calculated with ST_ConvexHull() function in PostgreSQL</description>
@@ -96,7 +112,7 @@
 				<tilt>44.99999994560297</tilt>
 				<range>999.9998743874111</range>
 			</LookAt>
-	        <Placemark>
+			<Placemark>
 				<name>Convex hull around 3060 W Olympic</name>
 				<styleUrl>#convexHullPolyStyle</styleUrl>
 				<Polygon>
@@ -115,6 +131,50 @@
 					</outerBoundaryIs>
 				</Polygon>
 			</Placemark>
+		</Folder>
+
+
+
+		<Folder>
+			<name>Nearest Neighbors</name>
+			<description>3 nearest neighbors from my apartment</description>
+			<Placemark>
+				<name>Homeshopping World</name>
+				<styleUrl>#nearestNeighborsLineStyle</styleUrl>
+				<LineString>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>
+						-118.301944,34.052222,10
+						-118.301944,34.052778,10
+					</coordinates>
+				</LineString>
+			</Placemark>
+
+			<Placemark>
+				<name>SleepEZ</name>
+				<styleUrl>#nearestNeighborsLineStyle</styleUrl>
+				<LineString>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>
+						-118.301944,34.052222,10
+						-118.301611,34.053139,10
+					</coordinates>
+				</LineString>
+			</Placemark>
+
+			<Placemark>
+				<name>Guelaguetza Restaurant</name>
+				<styleUrl>#nearestNeighborsLineStyle</styleUrl>
+				<LineString>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>
+						-118.301944,34.052222,10
+						-118.300833,34.052222,10
+					</coordinates>
+				</LineString>
+			</Placemark>
+
+
 		</Folder>
 	</Document>
 </kml>
