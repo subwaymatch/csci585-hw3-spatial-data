@@ -8,9 +8,11 @@ function getSpirographCoordinates() {
 		lng: -118.289224
 	};
 
+	// An array to hold the coordinates of the spirograph
 	var paths = []; 
 
-	var R = 8
+	// Parameters for the spirograph
+	var R = 8;
 	var r = 1;
 	var a = 4; 
 	var x0 = R + r - a; 
@@ -21,9 +23,18 @@ function getSpirographCoordinates() {
 	var pi = Math.PI;
 	var nRev = 16; 
 
+	// Parameter to scale the spirograph
+	// With the original scale, the spirograph will be too large
+	var spiroScale = 0.001; 
+
+	// Loop and generate coordinates
 	for (var t = 0.0; t < (pi * nRev); t += 0.01) {
 		var x = (R + r) * cos((r / R) * t) - a * cos((1 + r / R) * t); 
 		var y = (R + r) * sin((r / R) * t) - a * sin((1 + r / R) * t); 
+
+		// Scale the spirograph
+		x *= spiroScale; 
+		y *= spiroScale; 
 
 		paths.push({
 			lat: origin.lat + x, 
@@ -38,7 +49,7 @@ var paths = getSpirographCoordinates();
 
 console.log(paths);
 
-var ws = fs.createWriteStream('./spirograph_coordinates.kml'); 
+var ws = fs.createWriteStream('./spiro.kml'); 
 
 var xw  = new XMLWriter(false, function(string, encoding) {
 	ws.write(string, encoding); 
